@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blank Page</title>
+    <title>Interactive Birthday Surprise</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <script src="script.js"></script>
 </head>
 <body>
-    <div>
-        <h1>Fuck You!</h1>
+    <div class="box" id="giftBox">
+        <div class="lid" id="lid"></div>
+        <div class="content" id="message">
+            <h2>Happy Birthday!</h2>
+        </div>
     </div>
+
+    <script>
+        // Example jQuery usage
+        $(document).ready(function() {
+            $('#giftBox').click(function() {
+                $(this).toggleClass('open');
+            });
+        });
+    </script>
 </body>
 </html>
+
