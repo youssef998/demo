@@ -1,72 +1,58 @@
-/* styles.css */
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.box {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    background-color: #3498db; /* Blue background color */
-    border: 4px solid #2980b9; /* Darker blue border */
-    border-radius: 10px;
-    overflow: hidden;
+body { 
+    text-align: center; 
+    background-color: #f0f8ff; 
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  h1, h2 {
+    opacity: 0;
+    transition: opacity 2s ease;
+  }
+  
+  #revealBtn, #noticeBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
-}
-
-.box:hover {
-    background-color: #2980b9; /* Darker blue on hover */
-}
-
-.lid {
+    font-size: 1.2rem;
+  }
+  #noticeBtn {
+    display: none;
+  }
+  
+  #finalReveal {
+    font-size: 2rem;
+    color: #ff6f61;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+  
+  .heart {
+    width: 30px;
+    height: 30px;
+    background-color: #ff6f61;
+    transform: rotate(-45deg);
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background-color: #e74c3c; /* Red lid color */
-    transition: transform 0.3s ease; /* Lid animation */
-}
-
-.box.open .lid {
-    transform: translateY(-50%);
-}
-
-.content {
+    animation: floatHeart 5s infinite;
+  }
+  
+  .heart::before, .heart::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: #ff6f61;
+    border-radius: 50%;
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background-color: #e74c3c; /* Red content background color */
-    padding: 20px;
-    box-sizing: border-box;
-    transform: translateY(100%);
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Content animation */
-    opacity: 0; /* Initially hidden */
-}
-
-.box.open .content {
-    transform: translateY(0%);
-    opacity: 1; /* Revealed on open */
-}
-
-.content h2 {
-    color: #fff; /* White text color */
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.content p {
-    color: #fff; /* White text color */
-    font-size: 14px;
-    line-height: 1.5;
-}
+  }
+  
+  .heart::before { top: -15px; left: 0; }
+  .heart::after { left: 15px; top: 0; }
+  
+  @keyframes floatHeart {
+    0% { bottom: -50px; opacity: 0; }
+    50% { opacity: 1; }
+    100% { bottom: 300px; opacity: 0; }
+  }
+  

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
     <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script>
+      confetti({
+        particleCount: 200,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    </script>
 </head>
 <body>
     <div class="box" id="giftBox">
@@ -26,4 +35,75 @@
     </script>
 </body>
 </html>
+ -->
+ <!-- <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Happy E-Birthday!</title>
+   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+   <style>
+     body { text-align: center; background-color: #fdf6e3; }
+     .typed-text { 
+       font-family: 'Dancing Script', cursive; 
+       font-size: 3rem; 
+       margin-top: 100px; 
+       color: #ff6f61;
+       border-right: 3px solid;
+       width: 0;
+       animation: typing 4s steps(40, end) forwards;
+     }
+     .balloon { width: 50px; height: 80px; background-color: #ff6f61; border-radius: 50%; position: absolute; bottom: -100px; animation: float 10s infinite ease-in-out; }
+     @keyframes typing { from { width: 0; } to { width: 100%; } }
+     @keyframes float { 0% { transform: translateY(100%); } 100% { transform: translateY(-100%); } }
+   </style>
+ </head>
+ <body>
+   <h1 class="typed-text">Happy E-Birthday, My Love!</h1>
+   <div class="balloon" style="left: 10%; background-color: #ff6f61;"></div>
+   <div class="balloon" style="left: 50%; background-color: #ffa726;"></div>
+   <div class="balloon" style="left: 80%; background-color: #ffca28;"></div>
+ 
+   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+   <script>
+     confetti({ particleCount: 200, spread: 70, origin: { y: 0.6 } });
+   </script>
+ </body>
+ </html>
+  -->
 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel with Me?</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <h1 id="question0">Hi Hayouya.. 🎈</h1>
+  <h1 id="question1">Jee have a little question for you... 🧐</h1>
+  <h2 id="question2">Would you like to go on an adventure with Him?😉 🚀</h2>
+
+  <button id="revealBtn" onclick="revealClues()">Where?</button>
+
+  <h2 id="clue1">The place is known for its rich history... 🏛️</h2>
+  <h2 id="clue2">It’s a magical city that bridges two continents... 🌍</h2>
+  <h2 id="clue3">The food is as amazing as you are! 🥙</h2>
+
+  <button id="noticeBtn" onclick="revealFinalMessage()">Have you noticed where my baeb?🥰🥹</button>
+
+  <h1 id="finalReveal">Would you travel with me to Turkey? 🇹🇷💖✈️</h1>
+
+  <div class="heart" style="left: 10%; bottom: -50px;"></div>
+  <div class="heart" style="left: 70%; bottom: -50px;"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
